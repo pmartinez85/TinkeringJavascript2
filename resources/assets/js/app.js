@@ -21,12 +21,14 @@ const app = new Vue({
     el: '#app'
 });
 
-
+//HTTP REQUEST DE TIPUS GET
 $.ajax({
     type: "GET",
     url: 'http:localhost:8000/apicutre/user/1',
-    data: data,
-    success: success,
+    success: function(result){ //en result va el resultat d'haver cridat a la pàgina
+        console.log("Ajax OK");
+        console.log(result);
+    }
 
 });
 
