@@ -22,15 +22,26 @@ const app = new Vue({
 });
 
 //HTTP REQUEST DE TIPUS GET
-$.ajax({
-    type: "GET",
-    url: 'http:localhost:8000/apicutre/user/1',
-    success: function(result){ //en result va el resultat d'haver cridat a la pàgina
-        console.log("Ajax OK");
-        console.log(result);
-    }
+//CSS Selector
+$("#getuser").click(function(){ //seleccionem el seu objecte pel seu id
+    $.ajax({
+        //type: "GET",  //canviar a POST
+        // afegir data: $(#'user').value........
+        //afegir una ruta en web.php i fer-la  post per a que ens retorne la informació del usuari(sense fer formulari ni button tipus submit)
+        url: 'http://localhost:8000/apicutre/user/1',
+        success: function(result){ //en result va el resultat d'haver cridat a la pàgina
+            console.log("Ajax OK");
+            console.log(result);
+            $("#user").val(result);
+        },
+        error: function(){
+            console.log("Error de peticio Ajax");
+        }
+
+    });
 
 });
+
 
 
 //jQuery.ajax (url [, settings])
