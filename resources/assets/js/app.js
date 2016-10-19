@@ -21,25 +21,14 @@ const app = new Vue({
     el: '#app'
 });
 
-var animales = require('./animal');
-var animales = require('./dog');
-var animales = require('./cat');
-var anim = new animales.Animal();
-var gos = new animales.Animal();
-var gat = new animales.Animal();
+
+$.ajax({
+    type: "GET",
+    url: 'http:localhost:8000/apicutre/user/1',
+    data: data,
+    success: success,
+
+});
 
 
-exports.Animal = Animal;
-
-//Comencem el codi
-
-var dog = new Dog();
-dog.eat();
-dog.say();
-var cat = new Cat();
-cat.eat();
-cat.say();
-
-
-
-
+//jQuery.ajax (url [, settings])
