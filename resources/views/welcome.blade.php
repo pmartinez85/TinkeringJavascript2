@@ -18,12 +18,14 @@
     </div>
     <button id="getuser" class="btn btn-primary">get user</button>
     Usuari: <input  type="text" name="user" id="user" value="">
+
+    <button id="postuser" class="btn btn-primary">post user</button>
+    Usuari: <input  type="text" name="user" id="user" value="">
 <div id="app"></div>
 <h1>Hola sóc Pedro, mira la consola</h1>
 
-<script src="js/app.js">
 
-</script>
+    <script src="js/app.js"> </script>
 
 </body>
 </html>

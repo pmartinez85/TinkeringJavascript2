@@ -25,24 +25,40 @@ const app = new Vue({
 //CSS Selector
 $("#getuser").click(function(){ //seleccionem el seu objecte pel seu id
     $.ajax({
-        type: "POST",  //canviar a POST
+        type: "GET",  //canviar a POST
         data: $("#user").val(),
         //afegir una ruta en web.php i fer-la  post per a que ens retorne la informació
         // del usuari(sense fer formulari ni button tipus submit)
         url: 'http://localhost:8000/apicutre/user/1',
         success: function(result){ //en result va el resultat d'haver cridat a la pàgina
-            console.log("Ajax OK");
+            console.log("Get Ajax OK");
             console.log(result);
             $("#user").val(result);
         },
         error: function(){
-            console.log("Error de peticio Ajax");
+            console.log("Error de peticio Get Ajax");
         }
 
     });
 
 });
 
+$("#postuser").click(function(){ //seleccionem el seu objecte pel seu id
+    $.ajax({
+        type: "POST",  //canviar a POST
+        data: $("#user").val(),
+        //afegir una ruta en web.php i fer-la  post per a que ens retorne la informació
+        // del usuari(sense fer formulari ni button tipus submit)
+        url: 'http://localhost:8000/apicutre/user/1',
+        success: function(result){ //en result va el resultat d'haver cridat a la pàgina
+            console.log("Get Ajax OK");
+            console.log(result);
+            $("#user").val(result);
+        },
+        error: function(){
+            console.log("Error de peticio Post Ajax");
+        }
 
+    });
 
-//jQuery.ajax (url [, settings])
+});
