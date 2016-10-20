@@ -20,8 +20,10 @@
     Usuari: <input  type="text" name="user" id="user" value="">
 <div id="app"></div>
 <h1>Hola sóc Pedro, mira la consola</h1>
-    //canviar el codi del button en cmpte de fer button que ens envie al servidor el camp de l'input
-<script src="js/app.js"></script>
+
+<script src="js/app.js">
+
+</script>
 
 </body>
 </html>
