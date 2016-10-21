@@ -51,9 +51,9 @@ $("#postuser").click(function(){ //seleccionem el seu objecte pel seu id
         // del usuari(sense fer formulari ni button tipus submit)
         url: 'http://localhost:8000/apicutre/user/1',
         success: function(result){ //en result va el resultat d'haver cridat a la pàgina
-            console.log("Get Ajax OK");
+            console.log("Post Ajax OK");
             console.log(result);
-            $("#user").val(result);
+            $("#userpost").val(result);
         },
         error: function(){
             console.log("Error de peticio Post Ajax");

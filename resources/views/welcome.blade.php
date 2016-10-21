@@ -20,7 +20,7 @@
     Usuari: <input  type="text" name="user" id="user" value="">
 
     <button id="postuser" class="btn btn-primary">post user</button>
-    Usuari: <input  type="text" name="user" id="user" value="">
+    Usuari: <input  type="text" name="userpost" id="userpost" value="">
 <div id="app"></div>
 <h1>Hola sóc Pedro, mira la consola</h1>
 
